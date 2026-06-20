@@ -1,0 +1,59 @@
+.tracked-caption {
+  position: absolute;
+  max-width: 560px;
+  padding: var(--space-4);
+  transition: opacity 0.15s var(--ease-organic),
+              transform 0.3s var(--ease-organic);
+}
+
+.tracked-caption--center {
+  text-align: center;
+}
+
+.tracked-caption--left {
+  left: var(--space-6);
+  text-align: left;
+}
+
+.tracked-caption--right {
+  right: var(--space-6);
+  text-align: right;
+}
+
+.tracked-caption--bottom-left {
+  bottom: var(--space-7);
+  left: var(--space-6);
+  text-align: left;
+}
+
+.tracked-caption--bottom-right {
+  bottom: var(--space-7);
+  right: var(--space-6);
+  text-align: right;
+}
+
+.tracked-caption h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 48px);
+  font-style: italic;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.tracked-caption p {
+  font-size: clamp(14px, 1.5vw, 17px);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .tracked-caption--left,
+  .tracked-caption--right,
+  .tracked-caption--bottom-left,
+  .tracked-caption--bottom-right {
+    left: var(--space-3);
+    right: var(--space-3);
+    bottom: var(--space-5);
+    text-align: left;
+  }
+}
